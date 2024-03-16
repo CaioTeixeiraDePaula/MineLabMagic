@@ -27,7 +27,21 @@ jobs:
     - name: Download and setup Minecraft server
       run: |
         wget https://piston-data.mojang.com/v1/objects/8dd1a28015f51b1803213892b50b7b4fc76e594d/server.jar
-      
+        java -Xmx4G -Xms1024M -jar server.jar nogui
+
+        - name: Stop Server
+        run: |
+          # Find the PID of the server process
+          PID=$(pgrep -f "java -jar your_server.jar")
+  
+          # Check if the PID is found
+          if [ -n "$PID" ]; then
+            echo "Stopping server..."
+            kill "$PID"
+          else
+            echo "Server process not found."
+          fi
+          
     - name: Set Eula and Prorpieties
       run: |
         echo  eula=true > eula.txt
@@ -93,4 +107,4 @@ jobs:
 
     - name: Start Server
       run:  |
-        java -Xmx4g -Xms1024M -jar server.jar nogui
+        java -Xmx4G -Xms1024M -jar server.jar nogui
