@@ -1,4 +1,4 @@
-name: Minecraft Server Workflow
+name: Minecraft Server
 
 on:
   push:
@@ -22,4 +22,5 @@ jobs:
     - name: Download and setup Minecraft server
       run: |
         wget https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/530/downloads/paper-1.16.5-530.jar -O server.jar
+        echo "server-ip=26.175.173.254" | echo "server-port=55555"
         java -Xmx1024M -Xms1024M -jar server.jar nogui
