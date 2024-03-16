@@ -30,7 +30,7 @@ jobs:
       
     - name: Set Eula and Prorpieties
       run: |
-        eula=true > eula.txt
+        echo  eula=true > eula.txt
         echo  > server.properties
         echo  online-mode=true > server.properties
         echo  op-permission-level=4 > server.properties
