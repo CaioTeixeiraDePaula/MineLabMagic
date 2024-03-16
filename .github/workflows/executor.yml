@@ -8,15 +8,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Update apt
-      run: |
-        sudo apt update
-        sudo apt upgrade
+    # - name: Update apt
+    #   run: |
+    #     sudo apt update
+    #     sudo apt upgrade
     
     - name: Set up JDK
       uses: actions/setup-java@v2
@@ -37,4 +37,3 @@ jobs:
 
     - name: Start Server
       run:  java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.4.jar nogui
-
