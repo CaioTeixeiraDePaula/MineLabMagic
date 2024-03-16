@@ -30,7 +30,8 @@ jobs:
         java -Xmx1024M -Xms1024M -jar server.jar nogui
 
     - name: Get IP
-      run: ipconfig /all 
+      run: |
+        ipconfig 
       
     - name: Set Eula and Prorpieties
       run: |
