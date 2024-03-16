@@ -1,0 +1,46 @@
+[19:19:45] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[19:19:46] [ServerMain/INFO]: No existing world data, creating new world
+[19:19:47] [ServerMain/INFO]: Loaded 7 recipes
+[19:19:47] [ServerMain/INFO]: Loaded 1271 advancements
+[19:19:48] [Server thread/INFO]: Starting minecraft server version 1.20.4
+[19:19:48] [Server thread/INFO]: Loading properties
+[19:19:48] [Server thread/INFO]: Default game type: SURVIVAL
+[19:19:48] [Server thread/INFO]: Generating keypair
+[19:19:48] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: The handle is invalid
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:?]
+	at java.io.FileInputStream.read(FileInputStream.java:287) ~[?:?]
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:345) ~[?:?]
+	at java.io.BufferedInputStream.implRead(BufferedInputStream.java:420) ~[?:?]
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:399) ~[?:?]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329) ~[?:?]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372) ~[?:?]
+	at sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215) ~[?:?]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169) ~[?:?]
+	at java.io.InputStreamReader.read(InputStreamReader.java:188) ~[?:?]
+	at java.io.BufferedReader.fill(BufferedReader.java:160) ~[?:?]
+	at java.io.BufferedReader.implReadLine(BufferedReader.java:370) ~[?:?]
+	at java.io.BufferedReader.readLine(BufferedReader.java:347) ~[?:?]
+	at java.io.BufferedReader.readLine(BufferedReader.java:436) ~[?:?]
+	at ama$1.run(SourceFile:89) ~[server-1.20.4.jar:?]
+[19:19:48] [Server thread/INFO]: Starting Minecraft server on 26.175.173.254:25565
+[19:19:48] [Server thread/INFO]: Using default channel type
+[19:19:48] [Server thread/WARN]: **** FAILED TO BIND TO PORT!
+[19:19:48] [Server thread/WARN]: The exception was: java.net.BindException: Address already in use: bind
+[19:19:48] [Server thread/WARN]: Perhaps a server is already running on that port?
+[19:19:48] [Server thread/ERROR]: Encountered an unexpected exception
+java.lang.IllegalStateException: Failed to initialize server
+	at net.minecraft.server.MinecraftServer.w(SourceFile:699) ~[server-1.20.4.jar:?]
+	at net.minecraft.server.MinecraftServer.a(SourceFile:270) ~[server-1.20.4.jar:?]
+	at java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:19:48] [Server thread/ERROR]: This crash report has been saved to: C:\Users\caiot\Desktop\MineLabMagic\.\crash-reports\crash-2024-03-16_19.19.48-server.txt
+[19:19:48] [Server thread/INFO]: Stopping server
+[19:19:48] [Server thread/INFO]: Saving worlds
+[19:19:48] [Server thread/ERROR]: Exception stopping the server
+java.lang.NullPointerException: Cannot invoke "and.D_()" because "$$5" is null
+	at net.minecraft.server.MinecraftServer.a(SourceFile:547) ~[server-1.20.4.jar:?]
+	at net.minecraft.server.MinecraftServer.t(SourceFile:606) ~[server-1.20.4.jar:?]
+	at ama.t(SourceFile:542) ~[server-1.20.4.jar:?]
+	at net.minecraft.server.MinecraftServer.w(SourceFile:718) ~[server-1.20.4.jar:?]
+	at net.minecraft.server.MinecraftServer.a(SourceFile:270) ~[server-1.20.4.jar:?]
+	at java.lang.Thread.run(Thread.java:1583) ~[?:?]

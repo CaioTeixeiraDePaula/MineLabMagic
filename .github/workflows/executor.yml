@@ -1,0 +1,25 @@
+name: Minecraft Server Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+    
+    - name: Download and setup Minecraft server
+      run: |
+        wget https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/530/downloads/paper-1.16.5-530.jar -O server.jar
+        java -Xmx1024M -Xms1024M -jar server.jar nogui
