@@ -1,4 +1,4 @@
-[21:48:11] [ServerMain/ERROR]: Failed to load properties from file: server.properties
+[02:47:23] [ServerMain/ERROR]: Failed to load properties from file: server.properties
 java.nio.file.NoSuchFileException: server.properties
 	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
 	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
@@ -14,5 +14,5 @@ java.nio.file.NoSuchFileException: server.properties
 	at net.minecraft.server.Main.main(SourceFile:112) ~[server-1.20.4.jar:?]
 	at net.minecraft.bundler.Main.lambda$run$0(Main.java:54) ~[?:?]
 	at java.lang.Thread.run(Thread.java:1583) ~[?:?]
-[21:48:11] [ServerMain/WARN]: Failed to load eula.txt
-[21:48:11] [ServerMain/INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
+[02:47:23] [ServerMain/WARN]: Failed to load eula.txt
+[02:47:23] [ServerMain/INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
