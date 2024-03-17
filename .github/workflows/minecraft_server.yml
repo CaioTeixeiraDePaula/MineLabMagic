@@ -27,19 +27,31 @@ jobs:
     - name: Download and setup Minecraft server
       run: |
         wget https://piston-data.mojang.com/v1/objects/8dd1a28015f51b1803213892b50b7b4fc76e594d/server.jar
-        java -Xmx1024M -Xms1024M -jar server.jar nogui
+        java -Xmx4g -Xms1024M -jar server.jar nogui
 
-    - name: Get IP
-      run: ipconfig /all 
-      
+        - name: Stop Server
+        run: |
+          # Find the PID of the server process
+          PID=$(pgrep -f "java -jar your_server.jar")
+  
+          # Check if the PID is found
+          if [ -n "$PID" ]; then
+            echo "Stopping server..."
+            kill "$PID"
+          else
+            echo "Server process not found."
+          fi
+    
     - name: Set Eula and Prorpieties
       run: |
-        echo  online-mode=true
-        echo  op-permission-level=4
-        echo  player-idle-timeout=0
-        echo  prevent-proxy-connections=false
-        echo  pvp=true
-        echo  query.port=25565echo eula=true > eula.txt
+        echo  eula=true > eula.txt
+        echo  > server.properties
+        echo  online-mode=true > server.properties
+        echo  op-permission-level=4 > server.properties
+        echo  player-idle-timeout=0 > server.properties
+        echo  prevent-proxy-connections=false > server.properties
+        echo  pvp=true > server.properties
+        echo  query.port=25565 > server.properties
         echo  allow-flight=false > server.properties
         echo  allow-nether=true  > server.properties
         echo  broadcast-console-to-ops=true > server.properties
@@ -95,4 +107,4 @@ jobs:
 
     - name: Start Server
       run:  |
-        java -Xmx1024M -Xms1024M -jar server.jar nogui
+        java -Xmx4g -Xms1024M -jar server.jar nogui
